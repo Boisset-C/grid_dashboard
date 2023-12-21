@@ -16,7 +16,7 @@ a {
 #grid-container {
 	display: grid;
 	min-height: 100vh;
-	background-color: white;
+	background-color: rgba(227, 232, 239, 1);
 	grid-template-rows: repeat(12, 1fr);
 	grid-template-columns: repeat(12, 1fr);
 	grid-auto-rows: 150px;
@@ -76,6 +76,7 @@ a {
 	grid-column: 2 / 13;
 	grid-row: 1 / 3;
 	box-shadow: 0px 5px 5px 0px gray;
+	background-color: white;
 	z-index: 1;
 }
 
@@ -161,7 +162,6 @@ a {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-template-rows: 0.05fr 300px 300px;
-	background-color: rgba(227, 232, 239, 1);
 	grid-auto-rows: 300px;
 	grid-column: 2 / 10;
 	grid-row: 3 / 13;
@@ -178,8 +178,6 @@ a {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
-	border: 1px solid black;
 	border-left: 8px solid gold;
 	background-color: white;
 	gap: 1rem;
@@ -201,9 +199,23 @@ a {
 }
 
 .alerts {
-	border: 2px solid blueviolet;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	gap: 1rem;
 	grid-column: 10 / 13;
 	grid-row: 3 / 13;
+	margin: 1rem;
+}
+
+.announcements {
+	border-radius: 16px;
+	background-color: white;
+}
+
+.announcements-section {
+	border-bottom: 1px solid black;
+	margin: 1.5rem;
 }
 
 /* Testing purposes */
@@ -214,4 +226,8 @@ p {
 /* Fonts */
 .fs-small {
 	font-size: 1.25rem;
+}
+
+.fs-large {
+	font-size: 1.75rem;
 }
